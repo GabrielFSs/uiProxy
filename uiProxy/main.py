@@ -3,10 +3,10 @@ import websockets
 
 async def proxy_handler(client_ws, path):
     # Determina a URI do servidor com base no caminho
-    if path == "/ui1":
-        server_uri = 'ws://localhost:1880/ui1'
-    elif path == "/ui2":
-        server_uri = 'ws://localhost:1880/ui2'
+    if path == "/ui/1":
+        server_uri = 'ws://localhost:1880/ui/1'
+    elif path == "/ui/2":
+        server_uri = 'ws://localhost:1880/ui/2'
     else:
         print(f"Caminho não suportado: {path}")
         await client_ws.close()
