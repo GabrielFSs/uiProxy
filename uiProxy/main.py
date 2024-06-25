@@ -34,4 +34,4 @@ async def start_proxy():
     async with websockets.serve(proxy_handler, 'localhost', 9090):
         await asyncio.Future()  # Mantém o servidor rodando
 
-asyncio.r
+asyncio.run(start_proxy())
